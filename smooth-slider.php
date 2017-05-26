@@ -290,8 +290,8 @@ global $smooth_slider;
 			$wpdb->insert($table_name, array('post_id' => $post_id, 'date' => $dt, 'slider_id' => $slider_id)); 
 		  }
 		}
-		if(isset($_POST['sslider_expiry']) ) {
-			$expiry=sanitize_text_field($_POST['sslider_expiry']);
+		if(isset($_POST['sslider_expiry_actual']) ) {
+			$expiry=sanitize_text_field($_POST['sslider_expiry_actual']);
 			if(!empty($expiry)){
 				$date=$expiry;
 				$dt = date("Y-m-d",strtotime($date));
@@ -351,7 +351,7 @@ global $smooth_slider;
 		}
 	
 		$sslider_expiry = get_post_meta($post_id,'_sslider_expiry',true);
-		$post_sslider_expiry = isset($_POST['sslider_expiry'])?sanitize_text_field($_POST['sslider_expiry']):'';
+		$post_sslider_expiry = isset($_POST['sslider_expiry_actual'])?sanitize_text_field($_POST['sslider_expiry_actual']):'';
 		if($sslider_expiry != $post_sslider_expiry) {
 		  update_post_meta($post_id, '_sslider_expiry', $post_sslider_expiry);	
 		}	
@@ -535,13 +535,14 @@ function add_to_slider_checkbox() {
 			});
 			jQuery("#smooth_ExpiryDate").on("change", function(e){
 				var expDt=jQuery(this).val();
+				jQuery("#sslider_expiry_actual").val(expDt);
 				if(expDt.length>0){
 					jQuery("#sslider_none").show();
 				}
 				else{
 					jQuery("#sslider_none").hide();
 				}
-			}).triggerHandler("change");
+			});
 			jQuery("#sslider_none").on("click", function(e){
 				jQuery("#smooth_ExpiryDate").val("");
 				jQuery("#smooth_ExpiryDate").triggerHandler("change");
@@ -661,7 +662,7 @@ function add_to_slider_checkbox() {
 
 		<tr valign="top">
 		 <th scope="row"><label for="sslider_expiry"><?php _e('Expiry Date','smooth-slider'); ?></label></th>
-                	<td><input type="text" name="sslider_expiry" id="smooth_ExpiryDate" class="sslider_expiry" readonly="true" value="<?php echo ((!empty($sslider_expiry))?date_i18n($wpDateFormat, strtotime($sslider_expiry)):'');?>" size="20" /> <button name="sslider_none" id="sslider_none"><?php esc_html_e( 'None','smooth-slider' );?>
+                	<td><input type="text" name="sslider_expiry" id="smooth_ExpiryDate" class="sslider_expiry" readonly="true" value="<?php echo ((!empty($sslider_expiry))?date_i18n($wpDateFormat, strtotime($sslider_expiry)):'');?>" size="20" /> <input type="hidden" name="sslider_expiry_actual" id="sslider_expiry_actual" value="<?php echo $sslider_expiry;?>" /><button name="sslider_none" id="sslider_none"><?php esc_html_e( 'None','smooth-slider' );?>
                 </td></tr>
 
 		<tr valign="top">
