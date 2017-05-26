@@ -533,6 +533,21 @@ function add_to_slider_checkbox() {
 			jQuery('#smooth_ExpiryDate').datepicker({
 				dateFormat : "<?php echo $dtpicker ?>"
 			});
+			jQuery("#smooth_ExpiryDate").on("change", function(e){
+				var expDt=jQuery(this).val();
+				if(expDt.length>0){
+					jQuery("#sslider_none").show();
+				}
+				else{
+					jQuery("#sslider_none").hide();
+				}
+			}).triggerHandler("change");
+			jQuery("#sslider_none").on("click", function(e){
+				jQuery("#smooth_ExpiryDate").val("");
+				jQuery("#smooth_ExpiryDate").triggerHandler("change");
+				e.preventDefault();
+				return false;
+			});
 			jQuery("#smooth_basic").css({"background":"#222222","color":"#ffffff"});
 			jQuery("#smooth_basic").on("click", function(){ 
 				jQuery("#smooth_basic_tab").fadeIn("fast");
@@ -646,7 +661,7 @@ function add_to_slider_checkbox() {
 
 		<tr valign="top">
 		 <th scope="row"><label for="sslider_expiry"><?php _e('Expiry Date','smooth-slider'); ?></label></th>
-                	<td><input type="text" name="sslider_expiry" id="smooth_ExpiryDate" class="sslider_expiry" readonly="true" value="<?php echo date_i18n($wpDateFormat, strtotime($sslider_expiry));?>" size="20" />
+                	<td><input type="text" name="sslider_expiry" id="smooth_ExpiryDate" class="sslider_expiry" readonly="true" value="<?php echo ((!empty($sslider_expiry))?date_i18n($wpDateFormat, strtotime($sslider_expiry)):'');?>" size="20" /> <button name="sslider_none" id="sslider_none"><?php esc_html_e( 'None','smooth-slider' );?>
                 </td></tr>
 
 		<tr valign="top">
