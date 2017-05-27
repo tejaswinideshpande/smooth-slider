@@ -3,8 +3,8 @@ Contributors: internet techies, slidervilla, tejaswini
 Donate link: http://www.clickonf5.org/go/smooth-slider/ 
 Tags: best slider plugin, carousel, carousel slider, coin slider, content slider, content slideshow, custom video slider, flex slider, free video slider, free video slideshow, Horizontal slider, Image Rotator, image slider, image slideshow, javascript slider, javascript slideshow, jquery slider, jquery slideshow, Photo Slider, posts slider, responsive slider, responsive slideshow, sidebar, slide, slide show, slider, slider plugin, slider widget, slides, slideshow,slideshow manager, slideshow plugin, vertical slider, video slider, video slideshow,vimeo slideshow, vimeo slider, widget slider, widget slideshow, wordpress slider, wordpress slideshow, wp slider, youtube slider, youtube slideshow, post slider, fullscreen Slider, css3 slider, responsive image slider, banner slider, social slider, cycle slider, text slider, revolution slider, thumbnail slider, touch slider, sliders, parallax slider, coinslider, featured-content-slider, image, images, picture, pictures, picture slider, responsive, shortcode, widget, vertical slides, autoplay, auto, jquery, rotate, flexslider, gallery, photo gallery, javascript, rotator, wordpress picture slider, wordpress responsive slider, animation, best slider, fullwidth slider, mobile slider, swipe, layer, layer slider, product slider, mp3, video
 Requires at least: 3.0
-Tested up to: 4.6.1
-Stable tag: 2.8.6
+Tested up to: 4.7.5
+Stable tag: 2.8.7
 License: GPLv2 or later
 
 Free WordPress Slider Plugin to Create Image Slider, Post Slider, Content Slider, Video Slideshow with Responsive Design
@@ -216,6 +216,11 @@ Check the other FAQs on Smooth [Slider Documetation on SliderVilla](http://guide
 
 
 == Changelog ==
+
+Version 2.8.7 (05/27/2017)
+
+1. Fix - Expiry date issue with non-English WordPress installations.
+2. Fix - Minor security fixes.
 
 Version 2.8.6 (11/10/2016)
 

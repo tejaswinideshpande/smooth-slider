@@ -368,7 +368,7 @@ global $smooth_slider;
 		  update_post_meta($post_id, '_disable_image', $post_disable_image );	
 		}
 		$smooth_sslider_eshortcode = get_post_meta($post_id,'_smooth_embed_shortcode',true);
-		$post_smooth_sslider_eshortcode = isset($_POST['smooth_sslider_eshortcode'])?sanitize_text_field($_POST['smooth_sslider_eshortcode']):'';
+		$post_smooth_sslider_eshortcode = isset($_POST['smooth_sslider_eshortcode'])?htmlentities( $_POST['smooth_sslider_eshortcode'], ENT_QUOTES):'';
 		if($smooth_sslider_eshortcode != $post_smooth_sslider_eshortcode) {
 		  update_post_meta($post_id, '_smooth_embed_shortcode', $post_smooth_sslider_eshortcode);	
 		}
@@ -669,12 +669,12 @@ function add_to_slider_checkbox() {
 		<th scope="row"><label for="disable_image"><?php _e('Disable Thumbnail Image','smooth-slider'); ?> </label></th>
 		<td><input type="checkbox" name="disable_image" value="1" <?php if($sslider_disable_image=='1'){echo "checked";}?>  /> </td>
 		</tr>
-              
+        <?php // die($smooth_embed_shortcode);?>
                 
 		<!-- Added for video - Start -->
 		<tr valign="top">
 		<th scope="row"><label for="embed_shortcode"><?php _e('Embed Shortcode','smooth-slider'); ?> </label><br><br><div style="font-weight:normal;border:1px dashed #ccc;padding:5px;color:#666;line-height:20px;font-size:13px;">You can embed any type of shortcode e.g video shortcode or button shortcode which you want to be overlaid on the slide.</div></th>
-		<td><textarea rows="4" cols="50" name="smooth_sslider_eshortcode"><?php echo htmlentities( $smooth_embed_shortcode, ENT_QUOTES);?></textarea></td>
+		<td><textarea rows="4" cols="50" name="smooth_sslider_eshortcode"><?php echo html_entity_decode( $smooth_embed_shortcode, ENT_QUOTES );?></textarea></td>
 		</tr>
 		</table>
 		<!-- Added for video - End -->
