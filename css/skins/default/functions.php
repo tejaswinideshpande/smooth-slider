@@ -135,7 +135,7 @@ function smooth_post_processor_default( $posts, $smooth_slider,$out_echo){
 			$html .=  $smooth_slide_image;
 		
 		/* Added for embeding any shortcode on slide - start */
-		$smooth_eshortcode=get_post_meta($post_id, '_smooth_embed_shortcode', true);
+		$smooth_eshortcode=html_entity_decode( get_post_meta($post_id, '_smooth_embed_shortcode', true), ENT_QUOTES );
 		if(!empty($smooth_eshortcode)){
 			$shortcode_html=do_shortcode($smooth_eshortcode);
 			$html.='<div class="smooth_slider_thumbnail"><div class="smooth_slider_eshortcode" '.$smooth_slider_css['smooth_slider_eshortcode'].'>'.$shortcode_html.'</div></div>';

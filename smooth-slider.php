@@ -669,7 +669,6 @@ function add_to_slider_checkbox() {
 		<th scope="row"><label for="disable_image"><?php _e('Disable Thumbnail Image','smooth-slider'); ?> </label></th>
 		<td><input type="checkbox" name="disable_image" value="1" <?php if($sslider_disable_image=='1'){echo "checked";}?>  /> </td>
 		</tr>
-        <?php // die($smooth_embed_shortcode);?>
                 
 		<!-- Added for video - Start -->
 		<tr valign="top">
