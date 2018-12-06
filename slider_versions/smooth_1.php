@@ -255,7 +255,7 @@ if ( is_admin() ){ // admin actions
 	if ( isset($_GET['page']) && ('smooth-slider-admin' == $_GET['page'] or 'smooth-slider-settings' == $_GET['page'])) {
 	$smooth_slider_curr=get_option('smooth_slider_options');
 	$active_tab=(isset($smooth_slider_curr['active_tab']))?$smooth_slider_curr['active_tab']:0;
-			if ( isset($_GET['page']) && ('smooth-slider-admin' == $_GET['page']) ){ if(isset($_POST['active_tab']) ) $active_tab=$_POST['active_tab'];else $active_tab = 0;}
+			if ( isset($_GET['page']) && ('smooth-slider-admin' == $_GET['page']) ){ if(isset($_POST['active_tab']) ) $active_tab=sanitize_text_field($_POST['active_tab']);else $active_tab = 0;}
 			if(empty($active_tab)){$active_tab=0;}
 ?>
 			<script type="text/javascript">

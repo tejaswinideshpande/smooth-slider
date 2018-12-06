@@ -315,7 +315,7 @@ if ($handle = opendir($directory)) {
 <span class="moreInfo">
 	&nbsp; <span class="trigger"> ? </span>
 	<div class="tooltip">
-	<?php _e('Put the tags like &lt;br&gt;&lt;a&gt;&ltp&gt; to retain them.Do not separate them using commas, neither use ⁄ anywhere.','smooth-slider'); ?>
+	<?php _e('Put the tags like &lt;br&gt;&lt;a&gt;&ltp&gt; to retain them.Do not separate them using commas, neither use \' anywhere.','smooth-slider'); ?>
 	</div>
 </span>
 </td>
@@ -1010,21 +1010,21 @@ jQuery('#saveResult').html("<div id='popup'><div class='modal_shortcode'>Quick E
 	<div class="postbox" style="margin:10px 0;"> 
 				<div class="inside">
 				<div style="margin:10px auto;">
-							<a href="http://slidervilla.com" title="Premium WordPress Slider Plugins" target="_blank"><img src="<?php echo smooth_slider_plugin_url('images/banner-premium.png');?>" alt="Premium WordPress Slider Plugins" width="100%" /></a>
+							<a href="https://slidervilla.com/" title="Premium WordPress Slider Plugins" target="_blank"><img src="<?php echo smooth_slider_plugin_url('images/banner-premium.png');?>" alt="Premium WordPress Slider Plugins" width="100%" /></a>
 				</div>
-				<p><a href="http://slidervilla.com/" title="Recommended WordPress Sliders" target="_blank">SliderVilla slider plugins</a> are feature rich and stylish plugins to embed a nice looking featured content slider in your existing or new theme template. 100% customization options available on WordPress Settings page of the plugin.</p>
-						<p><strong>Stylish Sliders, <a href="http://slidervilla.com/blog/testimonials/" target="_blank">Happy Customers</a>!</strong></p>
-                        <p><a href="http://slidervilla.com/" title="Recommended WordPress Sliders" target="_blank">For more info visit SliderVilla</a></p>
+				<p><a href="https://slidervilla.com//" title="Recommended WordPress Sliders" target="_blank">SliderVilla slider plugins</a> are feature rich and stylish plugins to embed a nice looking featured content slider in your existing or new theme template. 100% customization options available on WordPress Settings page of the plugin.</p>
+						<p><strong>Stylish Sliders, <a href="https://slidervilla.com//blog/testimonials/" target="_blank">Happy Customers</a>!</strong></p>
+                        <p><a href="https://slidervilla.com//" title="Recommended WordPress Sliders" target="_blank">For more info visit SliderVilla</a></p>
             </div></div>
          
 		<div class="postbox"> 
 		  <h3 class="hndle"><span><?php _e('About this Plugin:','smooth-slider'); ?></span></h3> 
 		  <div class="inside">
                 <ul>
-                <li><a href="http://slidervilla.com/smooth-slider" title="<?php _e('Smooth Slider Homepage','smooth-slider'); ?>" ><?php _e('Plugin Homepage','smooth-slider'); ?></a></li>
+                <li><a href="https://slidervilla.com//smooth-slider" title="<?php _e('Smooth Slider Homepage','smooth-slider'); ?>" ><?php _e('Plugin Homepage','smooth-slider'); ?></a></li>
                 <li><a href="http://wordpress.org/support/plugin/smooth-slider" title="<?php _e('Support Forum for Smooth Slider','smooth-slider'); ?>
 " ><?php _e('Support Forum','smooth-slider'); ?></a></li>
-                <li><a href="http://slidervilla.com/about-us/" title="<?php _e('Smooth Slider Author Page','smooth-slider'); ?>" ><?php _e('About the Author','smooth-slider'); ?></a></li>
+                <li><a href="https://slidervilla.com//about-us/" title="<?php _e('Smooth Slider Author Page','smooth-slider'); ?>" ><?php _e('About the Author','smooth-slider'); ?></a></li>
 		<li><a href="http://www.clickonf5.org/go/smooth-slider/" title="<?php _e('Donate if you liked the plugin and support in enhancing Smooth Slider and creating new plugins','smooth-slider'); ?>" ><?php _e('Donate with Paypal','smooth-slider'); ?></a></li>
 		<li><strong>Current Version: <?php echo SMOOTH_SLIDER_VER;?></strong></li>
                 </ul> 

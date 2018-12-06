@@ -40,7 +40,7 @@ if (current_user_can( $smooth_slider['user_level'] )) {
         	$sname_html =$sname_html.'<option value="'.$slider['slider_id'].'" '.$selected.'>'.$slider['slider_name'].'</option>';
       	   } 
 	  $form_fields['slider_name[]'] = array(
-              'label'      => __(''),
+              'label'      => '',
               'input'      => 'html',
               'html'       => '<select name="attachments['.$post->ID.'][slider_name][]" multiple="multiple" size="2" style="height:4em;">'.$sname_html.'</select>',
               'value'      => ''

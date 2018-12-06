@@ -1,43 +1,43 @@
 === Smooth Slider ===
 Contributors: internet techies, slidervilla, tejaswini
-Donate link: http://www.clickonf5.org/go/smooth-slider/ 
+Donate link: http://www.clickonf5.org/go/smooth-slider/
 Tags: best slider plugin, carousel, carousel slider, coin slider, content slider, content slideshow, custom video slider, flex slider, free video slider, free video slideshow, Horizontal slider, Image Rotator, image slider, image slideshow, javascript slider, javascript slideshow, jquery slider, jquery slideshow, Photo Slider, posts slider, responsive slider, responsive slideshow, sidebar, slide, slide show, slider, slider plugin, slider widget, slides, slideshow,slideshow manager, slideshow plugin, vertical slider, video slider, video slideshow,vimeo slideshow, vimeo slider, widget slider, widget slideshow, wordpress slider, wordpress slideshow, wp slider, youtube slider, youtube slideshow, post slider, fullscreen Slider, css3 slider, responsive image slider, banner slider, social slider, cycle slider, text slider, revolution slider, thumbnail slider, touch slider, sliders, parallax slider, coinslider, featured-content-slider, image, images, picture, pictures, picture slider, responsive, shortcode, widget, vertical slides, autoplay, auto, jquery, rotate, flexslider, gallery, photo gallery, javascript, rotator, wordpress picture slider, wordpress responsive slider, animation, best slider, fullwidth slider, mobile slider, swipe, layer, layer slider, product slider, mp3, video
-Requires at least: 3.0
-Tested up to: 4.7.5
-Stable tag: 2.8.7
+Requires at least: 4.0
+Tested up to: 4.9.8
+Stable tag: 2.8.8
 License: GPLv2 or later
 
 Free WordPress Slider Plugin to Create Image Slider, Post Slider, Content Slider, Video Slideshow with Responsive Design
 
 == Description ==
 
-WordPress allows to create variety of content for a website. To make the site look more engaging to visitors and utilize the web-page real estate, it is recommended to use sliders or carousels. Web is full of free and premium slideshow creators either using a page builder or with some JavaScript libraries. Unlike those, <a href="http://slidervilla.com/smooth-slider/" rel="friend" title="Smooth Slider">Smooth Slider</a> is specially designed for WordPress CMS and allows you to create variety of sliders like Posts Slider, Image Slider with uploaded images from Media Library, WordPress Page Slider, Video Slider, Pure Image Gallery etc. With the option to choose image placement in left, right or center, you can easily change the layout. Mobile friendly auto adjusted design makes Smooth Slider one of the best free WordPress responsive slider plugin. Plugin has been written by Tejaswini and the team at <a href="http://slidervilla.com/" rel="friend" title="Best WordPress Slider Store">SliderVilla - Best WordPress Slider Store</a>.
+WordPress allows to create variety of content for a website. To make the site look more engaging to visitors and utilize the web-page real estate, it is recommended to use sliders or carousels. Web is full of free and premium slideshow creators either using a page builder or with some JavaScript libraries. Unlike those, <a href="https://slidervilla.com//smooth-slider/" rel="friend" title="Smooth Slider">Smooth Slider</a> is specially designed for WordPress CMS and allows you to create variety of sliders like Posts Slider, Image Slider with uploaded images from Media Library, WordPress Page Slider, Video Slider, Pure Image Gallery etc. With the option to choose image placement in left, right or center, you can easily change the layout. Mobile friendly auto adjusted design makes Smooth Slider one of the best free WordPress responsive slider plugin. Plugin has been written by Tejaswini and the team at <a href="https://slidervilla.com//" rel="friend" title="Best WordPress Slider Store">SliderVilla - Best WordPress Slider Store</a>.
 
 > <strong>Premium WordPress Sliders</strong><br>
 
 > Apart from Smooth Slider, SliderVilla is having 19+ Free and Premium WordPress Sliders plugins. It is only place with so many ready designs for different requirements and needs. Pick a slider as per your design requirement and feature need. Premium sliders on SliderVilla comes with lot many extra features. 
-> For example, <a href="http://slidervilla.com/placid/" rel="friend" title="Placid Slider">Placid Slider</a> is the best Logo and Brand Slider WordPress plugin. If you are looking for an elegant Image Gallery for WordPress, checkout <a href="http://slidervilla.com/foto-slider/" rel="friend" title="Foto Slider">Foto Slider</a> 
-> of SliderVilla. Similarly, Pointelle Slider is a WordPress Content Slider best suitable as Homepage Slider. All these premium sliders are not just well integrated > with WordPress, but also comes with WooCommerce, Events Manager, The Events Calendar integrations. One can <a href="http://slidervilla.com/blog/2016/09/create-carousel-events-calendar-wordpress-plugin-data/">build Events Slider</a>, <a href="http://slidervilla.com/blog/2016/09/embed-woocommerce-product-slider-cart/">Products Slider</a>, Facebook Album
-> Slider, <a href="http://slidervilla.com/blog/2016/09/add-flickr-image-album-slider-wordpress/">Flickr Image Gallery</a>, RSS Feed Slider, Category and Tag Slider, Custom Post Type Slider, YouTube Auto Fetch Video Slider, Instagram Slider and many more.
+> For example, <a href="https://slidervilla.com//placid/" rel="friend" title="Placid Slider">Placid Slider</a> is the best Logo and Brand Slider WordPress plugin. If you are looking for an elegant Image Gallery for WordPress, checkout <a href="https://slidervilla.com//foto-slider/" rel="friend" title="Foto Slider">Foto Slider</a> 
+> of SliderVilla. Similarly, Pointelle Slider is a WordPress Content Slider best suitable as Homepage Slider. All these premium sliders are not just well integrated > with WordPress, but also comes with WooCommerce, Events Manager, The Events Calendar integrations. One can <a href="https://slidervilla.com//blog/2016/09/create-carousel-events-calendar-wordpress-plugin-data/">build Events Slider</a>, <a href="https://slidervilla.com//blog/2016/09/embed-woocommerce-product-slider-cart/">Products Slider</a>, Facebook Album
+> Slider, <a href="https://slidervilla.com//blog/2016/09/add-flickr-image-album-slider-wordpress/">Flickr Image Gallery</a>, RSS Feed Slider, Category and Tag Slider, Custom Post Type Slider, YouTube Auto Fetch Video Slider, Instagram Slider and many more.
 
-> <a href="http://slidervilla.com/">Visit SliderVilla</a>, the largest WordPress Slider Store.
+> <a href="https://slidervilla.com//">Visit SliderVilla</a>, the largest WordPress Slider Store.
 
 > <strong>Smooth Slider Pro</strong><br>
 
-> <a href="http://slidervilla.com/roster/">Roster Slider</a> of SliderVilla is the premium version of Smooth Slider plugin. You can create unlimited sliders with separate designs using Roster. It comes with 3
+> <a href="https://slidervilla.com//roster/">Roster Slider</a> of SliderVilla is the premium version of Smooth Slider plugin. You can create unlimited sliders with separate designs using Roster. It comes with 3
 > extra skins to make the sliders look even more elegant and design rich. Apart from that, All integrations and type of sliders are possible with Roster Slider
 > WordPress plugin.
 
 > <strong>Live Support & Priority Support</strong><br>
 
 > SliderVilla Support team is committed towards all users of our slider plugins including free sliders. If you are not getting reply on the support threads on
-> repository forum, please feel free to visit SliderVilla and get priority support using Live Chat or by <a href="http://slidervilla.com/contact-us/">submitting a ticket</a>.
+> repository forum, please feel free to visit SliderVilla and get priority support using Live Chat or by <a href="https://slidervilla.com//contact-us/">submitting a ticket</a>.
 
 
 
 = Create Responsive WordPress Slider =
 
-Once you create a new slider by adding posts to Smooth Slider, you can preview the complete slider on settings page. It allows you to customize the typography, transition speed, effect, background color, slider width and height etc. before embedding the slider. You can directly preview an <a href="http://slidervilla.com/blog/2015/12/dynamically-fetched-latest-posts-slider-wordpress/">Auto Fetched Recent Posts Slider</a> and Category Slider on the setting page.
+Once you create a new slider by adding posts to Smooth Slider, you can preview the complete slider on settings page. It allows you to customize the typography, transition speed, effect, background color, slider width and height etc. before embedding the slider. You can directly preview an <a href="https://slidervilla.com//blog/2015/12/dynamically-fetched-latest-posts-slider-wordpress/">Auto Fetched Recent Posts Slider</a> and Category Slider on the setting page.
 
 = Change Slide Link URL =
 
@@ -90,13 +90,13 @@ With Add-ons, you can extend the functionality of Smooth Slider WordPress plugin
 For more information, check the following articles
 
 * Complete <a href="http://guides.slidervilla.com/smooth-slider/">Documentation of Smooth Slider</a>
-* <a href="http://slidervilla.com/sliders-list-view/">Browser Premium Sliders of SliderVilla</a>
+* <a href="https://slidervilla.com//sliders-list-view/">Browser Premium Sliders of SliderVilla</a>
 * Once Slider is Installed, <a href="https://sanjeevmishra.com/make-wordpress-sites-load-faster-than-rediff-com/">Optimize the Site to Make it Fast</a>
-* Checkout <a href="http://slidervilla.com/blog/" rel="friend">WordPress Slider Blog</a> for Tutorials, Howtos and more
+* Checkout <a href="https://slidervilla.com//blog/" rel="friend">WordPress Slider Blog</a> for Tutorials, Howtos and more
 * Follow us on <a href="https://www.facebook.com/slidervilla">Facebook</a> and <a href="https://twitter.com/slidervilla">Twitter</a>
 
 = List of Premium Sliders =
-= <a href="http://slidervilla.com/sliders-list-view/" rel="friend" title="Premium WordPress Sliders">19+ Premium WordPress Sliders</a> =
+= <a href="https://slidervilla.com//sliders-list-view/" rel="friend" title="Premium WordPress Sliders">19+ Premium WordPress Sliders</a> =
 
 * Create Unlimited Settings Panels
 * Created Unlimited Custom Sliders
@@ -116,16 +116,16 @@ For more information, check the following articles
 
 Checkout Few Premium WordPress Responsive Sliders such as,
 
-* Placid Slider - <a href="http://slidervilla.com/placid/" rel="friend" title="Best Logo and Client Brand Slider">Best Logo and Client Brand Slider</a>
-* Pointelle Slider - <a href="http://slidervilla.com/pointelle/" rel="friend" title="Best WordPress Slider Design for Homepage">Best WordPress Slider Design for Homepage</a>
-* Glam Slider - <a href="http://slidervilla.com/glam/" rel="friend" title="Full Page Slider with Partial Visible Slides">Full Page Slider with Partial Visible Slides</a>
-* Featured Slider - <a href="http://slidervilla.com/featured-slider/" rel="friend" title="Awesome WordPress Slider to Show Featured Content">Awesome WordPress Slider to Show Featured Content</a>
-* Listic Slider - <a href="http://slidervilla.com/listic/" rel="friend" title="Best List View Slider for WordPress">Best List View Slider for WordPress</a>
-* Roster Slider - <a href="http://slidervilla.com/roster/" rel="friend" title="Best Horizontal Carousal for WordPress">Best Horizontal Carousal for WordPress</a>
-* Pinwheel Slider - <a href="http://slidervilla.com/pinwheel/" rel="friend" title="Ultimate rotator with responsive design">Ultimate rotator with responsive design</a>
-* Akkord Slider - <a href="http://slidervilla.com/akkord/" rel="friend" title="Premium Accordion Slider for WordPress">Premium Accordion Slider for WordPress</a>
-* Foto Slider - <a href="http://slidervilla.com/foto-slider/" rel="friend" title="Best Gallery View Slider for WordPress">Best Gallery View Slider for WordPress</a>
-and <a href="http://slidervilla.com/sliders-list-view/">many more</a>
+* Placid Slider - <a href="https://slidervilla.com//placid/" rel="friend" title="Best Logo and Client Brand Slider">Best Logo and Client Brand Slider</a>
+* Pointelle Slider - <a href="https://slidervilla.com//pointelle/" rel="friend" title="Best WordPress Slider Design for Homepage">Best WordPress Slider Design for Homepage</a>
+* Glam Slider - <a href="https://slidervilla.com//glam/" rel="friend" title="Full Page Slider with Partial Visible Slides">Full Page Slider with Partial Visible Slides</a>
+* Featured Slider - <a href="https://slidervilla.com//featured-slider/" rel="friend" title="Awesome WordPress Slider to Show Featured Content">Awesome WordPress Slider to Show Featured Content</a>
+* Listic Slider - <a href="https://slidervilla.com//listic/" rel="friend" title="Best List View Slider for WordPress">Best List View Slider for WordPress</a>
+* Roster Slider - <a href="https://slidervilla.com//roster/" rel="friend" title="Best Horizontal Carousal for WordPress">Best Horizontal Carousal for WordPress</a>
+* Pinwheel Slider - <a href="https://slidervilla.com//pinwheel/" rel="friend" title="Ultimate rotator with responsive design">Ultimate rotator with responsive design</a>
+* Akkord Slider - <a href="https://slidervilla.com//akkord/" rel="friend" title="Premium Accordion Slider for WordPress">Premium Accordion Slider for WordPress</a>
+* Foto Slider - <a href="https://slidervilla.com//foto-slider/" rel="friend" title="Best Gallery View Slider for WordPress">Best Gallery View Slider for WordPress</a>
+and <a href="https://slidervilla.com//sliders-list-view/">many more</a>
 
 
 == Installation ==
@@ -217,7 +217,11 @@ Check the other FAQs on Smooth [Slider Documetation on SliderVilla](http://guide
 
 == Changelog ==
 
-Version 2.8.7 (05/27/2017)
+Version 2.8.8 (12/04/2018)
+
+1. Fix - User input sanitization as per WordPress standards
+
+Version 2.8.7 (07/15/2017)
 
 1. Fix - Expiry date issue with non-English WordPress installations.
 2. Fix - Minor security fixes.

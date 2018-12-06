@@ -1,17 +1,24 @@
 <?php // This function displays the page content for the Smooth Slider Options submenu
 function smooth_slider_create_multiple_sliders() {
+
 global $smooth_slider;
 ?>
 <div class="wrap smooth_sliders_create" id="smooth_sliders_create" style="clear:both;">
 <h2 style="float:left;"><?php _e('Sliders Created','smooth-slider'); ?></h2>
 <?php 
 if (isset($_POST['remove_posts_slider'])) {
+$nonce = $_POST['SSliderIP'];
+if ( ! wp_verify_nonce( $nonce, 'SSliderNonce' ) ) :
+    // This nonce is not valid.
+    die( 'You are not authorized to remove slides!' ); 
+else :
    if (isset($_POST['slider_posts']) ) {
        global $wpdb, $table_prefix;
        $table_name = $table_prefix.SLIDER_TABLE;
-	   $current_slider = isset($_POST['current_slider_id'])?$_POST['current_slider_id']:'';
+	   $current_slider = isset($_POST['current_slider_id'])?sanitize_text_field( $_POST['current_slider_id'] ):'';
 	   $current_slider = intval($current_slider);
 	   foreach ( $_POST['slider_posts'] as $post_id=>$val ) {
+		$post_id=intval( sanitize_text_field($post_id) );
 		$wpdb->query( 
 			$wpdb->prepare( 
 				"
@@ -28,7 +35,7 @@ if (isset($_POST['remove_posts_slider'])) {
    if ($_POST['remove_all'] == __('Remove All at Once','smooth-slider')) {
        global $wpdb, $table_prefix;
        $table_name = $table_prefix.SLIDER_TABLE;
-	   $current_slider = isset($_POST['current_slider_id'])?$_POST['current_slider_id']:'';
+	   $current_slider = isset($_POST['current_slider_id'])?sanitize_text_field( $_POST['current_slider_id'] ):'';
 	   $current_slider = intval($current_slider);
 	   if(is_slider_on_slider_table($current_slider)) {
 		   $wpdb->delete( $table_name, array( 'slider_id' => $current_slider ), array( '%d' ) );
@@ -37,8 +44,8 @@ if (isset($_POST['remove_posts_slider'])) {
 }
  if (isset ($_POST['remove_all'])) {
    if ($_POST['remove_all'] == __('Delete Slider','smooth-slider')) {
-       	$slider_id = isset($_POST['current_slider_id'])?$_POST['current_slider_id']:'';
-	$slider_id = intval($slider_id);
+       	$slider_id = isset($_POST['current_slider_id'])?sanitize_text_field( $_POST['current_slider_id'] ):'';
+		$slider_id = intval($slider_id);
        
        global $wpdb, $table_prefix;
        $slider_table = $table_prefix.SLIDER_TABLE;
@@ -54,9 +61,15 @@ if (isset($_POST['remove_posts_slider'])) {
 		   $wpdb->delete( $slider_postmeta, array( 'slider_id' => $slider_id ), array( '%d' ) );
 	   }
    }
-}
+ }
+endif;
 }
 if (isset($_POST['create_new_slider'])) {
+$nonce = $_POST['SSliderIP'];
+if ( ! wp_verify_nonce( $nonce, 'SSliderNonce' ) ) :
+    // This nonce is not valid.
+    die( 'You are not authorized to create new slider!' ); 
+else :
    	$slider_name = sanitize_text_field( $_POST['new_slider_name'] );
    	global $wpdb,$table_prefix;
    	$slider_meta = $table_prefix.SLIDER_META;
@@ -68,13 +81,19 @@ if (isset($_POST['create_new_slider'])) {
 			$slider_name
 		) 
 	);
+endif;
 }
 if (isset($_POST['reorder_posts_slider'])) {
+$nonce = $_POST['SSliderIP'];
+if ( ! wp_verify_nonce( $nonce, 'SSliderNonce' ) ) :
+    // This nonce is not valid.
+    die( 'You are not authorized to reorder slides!' ); 
+else :
    $i=1;
    global $wpdb, $table_prefix;
    $table_name = $table_prefix.SLIDER_TABLE;
    foreach ($_POST['order'] as $slide_order) {
-    	$slide_order = intval($slide_order);
+    	$slide_order = intval( sanitize_text_field($slide_order) );
  	$wpdb->update( 
 		$table_name, 
 		array( 
@@ -88,11 +107,17 @@ if (isset($_POST['reorder_posts_slider'])) {
 	);
     	$i++;
   }
+endif;
 }
 /*Added for rename slider-2.6-start*/
 if ((isset ($_POST['rename_slider'])) and ($_POST['rename_slider'] == __('Rename','smooth-slider'))) {
+$nonce = $_POST['SSliderIP'];
+if ( ! wp_verify_nonce( $nonce, 'SSliderNonce' ) ) :
+    // This nonce is not valid.
+    die( 'You are not authorized to rename slider!' ); 
+else :
 	$slider_name = sanitize_text_field( $_POST['rename_slider_to'] );
-	$slider_id = isset($_POST['current_slider_id'])?$_POST['current_slider_id']:'';
+	$slider_id = isset($_POST['current_slider_id'])?sanitize_text_field( $_POST['current_slider_id'] ):'';
 	$slider_id = intval($slider_id);
 	if( !empty($slider_name) ) {
 		global $wpdb,$table_prefix;
@@ -109,19 +134,26 @@ if ((isset ($_POST['rename_slider'])) and ($_POST['rename_slider'] == __('Rename
 			array( '%d' ) 
 		);
 	}
+endif;
 }
 /*Added for rename slider-2.6-end*/
 
 /* Added for upload media save-2.6 */
 if ( isset($_POST['addSave']) and ($_POST['addSave']=='Save') ) {
+$nonce = $_POST['SSliderIP'];
+if ( ! wp_verify_nonce( $nonce, 'SSliderNonce' ) ) :
+    // This nonce is not valid.
+    die( 'You are not authorized to upload media files!' ); 
+else :
 	$images=(isset($_POST['imgID']))?$_POST['imgID']:array();
-	$slider_id = isset($_POST['current_slider_id'])?$_POST['current_slider_id']:'';
+	$slider_id = isset($_POST['current_slider_id'])?sanitize_text_field($_POST['current_slider_id']):'';
 	$slider_id = intval($slider_id);
 	$ids=array_reverse($images);
 	global $wpdb,$table_prefix;
 	foreach($ids as $id){
-		$title=(isset($_POST['title'][$id]))?esc_html($_POST['title'][$id]):'';
-		$desc=(isset($_POST['desc'][$id]))?esc_html($_POST['desc'][$id]):'';
+		$id = intval($id);
+		$title=(isset($_POST['title'][$id]))?sanitize_title($_POST['title'][$id]):'';
+		$desc=(isset($_POST['desc'][$id]))?wp_filter_post_kses($_POST['desc'][$id]):'';
 		$link=(isset($_POST['link'][$id]))?sanitize_text_field($_POST['link'][$id]):'';
 		$nolink=(isset($_POST['nolink'][$id]))?sanitize_text_field($_POST['nolink'][$id]):'';
 		$attachment = array(
@@ -147,6 +179,7 @@ if ( isset($_POST['addSave']) and ($_POST['addSave']=='Save') ) {
 				);
 		}
 	}
+endif;
 }
 /*   upload media end 2.6 */
 ?>
@@ -185,6 +218,7 @@ wp_enqueue_script( 'media-uploader', smooth_slider_plugin_url( 'js/media-uploade
 			</div>
 			<input type="hidden" name="current_slider_id" value="<?php echo $slider['slider_id'];?>" />
 			<input type="hidden" name="active_tab" class="smooth_activetab" value="0" />
+			<input type="hidden" name="SSliderIP" id="SSliderIP" value="<?php echo wp_create_nonce('SSliderNonce');?>" />
 		</form>
 	</div>
 <!-- Add bulk images end 2.6-->
@@ -239,6 +273,7 @@ wp_enqueue_script( 'media-uploader', smooth_slider_plugin_url( 'js/media-uploade
 ?>    
     </tbody></table>
 	<input type="hidden" name="active_tab" class="smooth_activetab" value="0" />
+	<input type="hidden" name="SSliderIP" id="SSliderIP" value="<?php echo wp_create_nonce('SSliderNonce');?>" />
  </form>
  
  
@@ -279,6 +314,7 @@ wp_enqueue_script( 'media-uploader', smooth_slider_plugin_url( 'js/media-uploade
     ?>    
        </div>   
 	<input type="hidden" name="active_tab" class="smooth_activetab" value="0" />    
+	<input type="hidden" name="SSliderIP" id="SSliderIP" value="<?php echo wp_create_nonce('SSliderNonce');?>" />
   </form>
 <!-- Added for rename slider -start -->
 	 <h3 class="sub-heading" style="margin:40px 0px 5px 0;"><?php _e('Rename Slider','smooth-slider'); ?></h3>
@@ -294,6 +330,7 @@ wp_enqueue_script( 'media-uploader', smooth_slider_plugin_url( 'js/media-uploade
 	
 		<input type="hidden" name="active_tab" class="smooth_activetab" value="0" />
                 <input type="hidden" name="smooth_slider_options[reviewme]" id="smooth_reviewme" value="<?php echo $smooth_slider['reviewme']; ?>" /> 
+		<input type="hidden" name="SSliderIP" id="SSliderIP" value="<?php echo wp_create_nonce('SSliderNonce');?>" />
 	
 	</form>
 
@@ -327,7 +364,7 @@ wp_enqueue_script( 'media-uploader', smooth_slider_plugin_url( 'js/media-uploade
     <input name="new_slider_name" class="regular-text code" value="" style="clear:both;" />
     
     <div class="submit"><input type="submit" value="<?php _e('Create New','smooth-slider'); ?>" name="create_new" /></div>
-    
+    <input type="hidden" name="SSliderIP" id="SSliderIP" value="<?php echo wp_create_nonce('SSliderNonce');?>" />
     </form>
     </div>
 <?php }?> 
@@ -341,10 +378,10 @@ wp_enqueue_script( 'media-uploader', smooth_slider_plugin_url( 'js/media-uploade
 		<h3 class="hndle"><span><?php _e('About this Plugin:','smooth-slider'); ?></span></h3> 
 		<div class="inside">
                 <ul>
-                <li><a href="http://slidervilla.com/smooth-slider" title="<?php _e('Smooth Slider Homepage','smooth-slider'); ?>" ><?php _e('Plugin Homepage','smooth-slider'); ?></a></li>
+                <li><a href="https://slidervilla.com//smooth-slider" title="<?php _e('Smooth Slider Homepage','smooth-slider'); ?>" ><?php _e('Plugin Homepage','smooth-slider'); ?></a></li>
                 <li><a href="http://wordpress.org/support/plugin/smooth-slider" title="<?php _e('Support Forum for Smooth Slider','smooth-slider'); ?>
 " ><?php _e('Support Forum','smooth-slider'); ?></a></li>
-                <li><a href="http://slidervilla.com/about-us/" title="<?php _e('Smooth Slider Author Page','smooth-slider'); ?>" ><?php _e('About the Author','smooth-slider'); ?></a></li>
+                <li><a href="https://slidervilla.com//about-us/" title="<?php _e('Smooth Slider Author Page','smooth-slider'); ?>" ><?php _e('About the Author','smooth-slider'); ?></a></li>
 		<li><a href="http://www.clickonf5.org/go/smooth-slider/" title="<?php _e('Donate if you liked the plugin and support in enhancing Smooth Slider and creating new plugins','smooth-slider'); ?>" ><?php _e('Donate with Paypal','smooth-slider'); ?></a></li>
 		<li><strong>Current Version: <?php echo SMOOTH_SLIDER_VER;?></strong></li>
                 </ul> 
@@ -355,7 +392,7 @@ wp_enqueue_script( 'media-uploader', smooth_slider_plugin_url( 'js/media-uploade
 				
      		  <div class="inside">
 				<div style="margin:10px auto;">
-							<a href="http://slidervilla.com" title="Premium WordPress Slider Plugins" target="_blank"><img src="<?php echo smooth_slider_plugin_url('images/banner-premium.png');?>" alt="Premium WordPress Slider Plugins" width="100%" /></a>
+							<a href="https://slidervilla.com/" title="Premium WordPress Slider Plugins" target="_blank"><img src="<?php echo smooth_slider_plugin_url('images/banner-premium.png');?>" alt="Premium WordPress Slider Plugins" width="100%" /></a>
 				</div>
 				</div></div>
      

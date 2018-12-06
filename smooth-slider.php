@@ -1,16 +1,16 @@
 <?php
 /*
 Plugin Name: Smooth Slider
-Plugin URI: http://slidervilla.com/smooth-slider/
+Plugin URI: https://slidervilla.com//smooth-slider/
 Description: Smooth slider adds a responsive featured content on image slider using shortcode, widget and template tags. Create and embed featured content slider, recent post slider, category slider in less than 60 seconds.
-Version: 2.8.7
+Version: 2.8.8
 Author: SliderVilla
 Text Domain: smooth-slider
-Author URI: http://slidervilla.com/
+Author URI: https://slidervilla.com//
 Wordpress version supported: 3.5 and above
 */
 
-/*  Copyright 2009-2017  SliderVilla  (email : support@slidervilla.com)
+/*  Copyright 2009-2018  SliderVilla  (email : support@slidervilla.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -26,17 +26,17 @@ Wordpress version supported: 3.5 and above
     along with this program; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
-//Please visit Plugin page http://slidervilla.com/smooth-slider/ for Changelog
+//Please visit Plugin page https://slidervilla.com//smooth-slider/ for Changelog
 //on activation
 //defined global variables and constants here
 global $smooth_slider,$default_slider,$smooth_db_version,$default_smooth_slider_settings;
 $smooth_slider = get_option('smooth_slider_options');
-$smooth_db_version='2.8.7'; //current version of smooth slider database 
+$smooth_db_version='2.8.8'; //current version of smooth slider database 
 define('SLIDER_TABLE','smooth_slider'); //Slider TABLE NAME
 define('PREV_SLIDER_TABLE','slider'); //Slider TABLE NAME
 define('SLIDER_META','smooth_slider_meta'); //Meta TABLE NAME
 define('SLIDER_POST_META','smooth_slider_postmeta'); //Meta TABLE NAME
-define("SMOOTH_SLIDER_VER","2.8.7",false);//Current Version of Smooth Slider
+define("SMOOTH_SLIDER_VER","2.8.8",false);//Current Version of Smooth Slider
 if ( ! defined( 'SMOOTH_SLIDER_PLUGIN_BASENAME' ) )
 	define( 'SMOOTH_SLIDER_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
 if ( ! defined( 'SMOOTH_SLIDER_CSS_DIR' ) ){
@@ -395,7 +395,7 @@ function remove_from_slider($post_id) {
 		if (!wp_verify_nonce($_POST['sldr-verify'], 'SmoothSlider'))
 			return $post_id;
 	
-	    	if(empty($_POST['smooth-slider']) and is_post_on_any_slider($post_id)) {
+	    if(empty($_POST['smooth-slider']) and is_post_on_any_slider($post_id)) {
 			$wpdb->delete( $table_name, array( 'post_id' => $post_id ), array( '%d' ) );
 		}
 	
@@ -524,7 +524,7 @@ function add_to_slider_checkbox() {
 		/* Post Meta Box Style */
 		wp_enqueue_style( 'smooth-meta-box', smooth_slider_plugin_url( 'css/smooth-meta-box.css' ), false, SMOOTH_SLIDER_VER, 'all');
 		wp_enqueue_script( 'jquery-ui-datepicker', false,array('jquery','jQuery-ui-core'),SMOOTH_SLIDER_VER, true); 
-		wp_enqueue_style('jquery-style', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css');
+		wp_enqueue_style('jquery-style', smooth_slider_plugin_url( 'css/jqueryui/1.8.2/themes/smoothness/jquery-ui.css') );
 		$dtpicker = smooth_dateformat_PHP_to_jQueryUI($wpDateFormat);
 ?>	
 	  <?php	/* start tab 2.6 */ ?>	
@@ -654,7 +654,7 @@ function add_to_slider_checkbox() {
             ?>
         </select> </td></tr>
           
-	<input type="hidden" name="sldr-verify" id="sldr-verify" value="<?php echo wp_create_nonce('SmoothSlider');?>" />
+		 <input type="hidden" name="sldr-verify" id="sldr-verify" value="<?php echo wp_create_nonce('SmoothSlider');?>" />
 	   	 <tr valign="top">
 		 <th scope="row"><label for="sslider_thumbnail"><?php _e('Custom Thumbnail Image(url)','smooth-slider'); ?></label></th>
                 	<td><input type="text" name="sslider_thumbnail" class="sslider_thumbnail" value="<?php echo $sslider_thumbnail;?>" size="50" />

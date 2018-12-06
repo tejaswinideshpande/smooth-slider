@@ -217,7 +217,7 @@ add_action( 'wp_ajax_smooth_update_review_me', 'smooth_update_review_me' );
 function smooth_update_review_me() {
 	$smooth_slider=array();
 	$smooth_slider = get_option('smooth_slider_options');
-	$reviewme=(isset($_POST['reviewme']))?($_POST['reviewme']):(strtotime("now"));
+	$reviewme=(isset($_POST['reviewme']))?( sanitize_text_field($_POST['reviewme']) ):(strtotime("now"));
 	if($reviewme>0){
 		$updated_reviewme=$smooth_slider['reviewme']=strtotime("+1 week", $reviewme);
 	}
